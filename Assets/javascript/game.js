@@ -26,7 +26,7 @@ var updateGuessesLeft = function () {
 
 var yourGuessesSoFar = [];
 var updateYourGuessesSoFar = function () {
-    document.querySelector("#far").innerHTML =  guessesLeft + "/" + guessesMax;  // yourGuessesSoFar.join(", ");
+    document.querySelector("#far").innerHTML =  yourGuessesSoFar.join(", "); 
 };
 
 var reset = function () {
@@ -39,8 +39,8 @@ var reset = function () {
 
 
 document.onkeydown = function (event) {
-    console.log(guessesLeft);
     guessesLeft--;
+    console.log(guessesLeft);
 
     updateGuessesLeft();
     updateYourGuessesSoFar();
