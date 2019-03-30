@@ -41,12 +41,12 @@ var reset = function () {
 document.onkeydown = function (event) {
     guessesLeft--;
     console.log(guessesLeft);
-
+    var number = event.key.toLowerCase();
+yourGuessesSoFar.push(number);
     updateGuessesLeft();
     updateYourGuessesSoFar();
 
-
-    if (guess === answer) {
+    if (number === answer) {
         wins++;
         document.querySelector("#wins").innerHTML = wins;
 
