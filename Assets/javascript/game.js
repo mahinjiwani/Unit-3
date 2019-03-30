@@ -1,7 +1,7 @@
 alert("I'm thinking of a number 1-10. Guess what number I'm thinking of");
 
 var answer = 9
-var guess;
+// var guess;
 var guess = prompt("Guess the number");
 
 
@@ -21,12 +21,12 @@ var losses = 0;
 var guessesLeft = 9;
 var guessesMax = 10;
 var updateGuessesLeft = function () {
-    document.getElementById("guesses").innerHTML = guessesLeft;
+    document.querySelector("#guesses").innerHTML = guessesLeft;
 }
 
 var yourGuessesSoFar = [];
 var updateYourGuessesSoFar = function () {
-    document.getElementById("far").innerHTML =  guessesLeft + "/" + guessesMax;  // yourGuessesSoFar.join(", ");
+    document.querySelector("#far").innerHTML =  guessesLeft + "/" + guessesMax;  // yourGuessesSoFar.join(", ");
 };
 
 var reset = function () {
